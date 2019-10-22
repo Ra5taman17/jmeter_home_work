@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan - 2" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Fragment" enabled="false"/>
+      <hashTree>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Include Controller" enabled="true">
+          <stringProp name="IncludeController.includepath">C:\Users\student\Desktop\jmeter_Mikhail_Borovikov\Test_Plan_1.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="1246764161">
+            <stringProp name="1693">52</stringProp>
+            <stringProp name="48">0</stringProp>
+            <stringProp name="52531">520</stringProp>
+            <stringProp name="1572771">3600</stringProp>
+            <stringProp name="52531">520</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action: Шаг нагрузки, pacing 34,6 секунд" enabled="true">
+          <intProp name="ActionProcessor.action">1</intProp>
+          <intProp name="ActionProcessor.target">0</intProp>
+          <stringProp name="ActionProcessor.duration">0</stringProp>
+        </TestAction>
+        <hashTree>
+          <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer: 1.73 итер/мин" enabled="true">
+            <intProp name="calcMode">0</intProp>
+            <doubleProp>
+              <name>throughput</name>
+              <value>1.73</value>
+              <savedValue>0.0</savedValue>
+            </doubleProp>
+            <stringProp name="TestPlan.comments">1.73 * 52(потоки) * 60 = 5400 итераций в час</stringProp>
+          </ConstantThroughputTimer>
+          <hashTree/>
+        </hashTree>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller" enabled="true">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="764597751">Test Plan</stringProp>
+            <stringProp name="-607634602">Test Plan - 2</stringProp>
+            <stringProp name="170071582">Test Fragment</stringProp>
+            <stringProp name="-2103900588">Include Controller</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">C:\Users\student\Desktop\jmeter_Mikhail_Borovikov\Test_Plan_2.jmx</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
+1571746259141,1591,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-52,text,true,,152940,120,1,1,https://loadtestweb.info/,1356,0,664
+1571746254869,1591,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-52,,true,,152940,120,1,1,null,1356,4280,664
+1571746261724,1028,/2017/10/17/install-apache-jmeter/,200,OK,jp@gc - Ultimate Thread Group 1-52,text,true,,171106,153,1,1,https://loadtestweb.info/2017/10/17/install-apache-jmeter/,717,0,81
+1571746260740,1028,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-52,,true,,171106,153,1,1,null,717,990,81
+1571746268923,1455,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-51,text,true,,152973,120,2,2,https://loadtestweb.info/,587,0,133
+1571746264868,1455,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-51,,true,,152973,120,2,2,null,587,4056,133
+1571746270606,447,/wp-comments-post.php,409,Conflict,jp@gc - Ultimate Thread Group 1-52,text,false,Test failed: text expected not to contain /Ошибка при отправке комментария/,3380,1217,2,2,https://loadtestweb.info/wp-comments-post.php,447,0,84
+1571746262758,447,Отправка комментария от незарегистрированного пользователя,,"Number of samples in transaction : 2, number of failing samples : 1",jp@gc - Ultimate Thread Group 1-52,,false,,3380,1217,2,2,null,447,7850,84
+1571746271248,1165,/2018/11/16/jmeter-maven-plugin/,200,OK,jp@gc - Ultimate Thread Group 1-51,text,true,,228953,151,2,2,https://loadtestweb.info/2018/11/16/jmeter-maven-plugin/,591,0,81
+1571746270378,1165,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-51,,true,,228953,151,2,2,null,591,872,81
+1571746276749,1342,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-50,text,true,,153044,120,3,3,https://loadtestweb.info/,365,0,136
+1571746274865,1342,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-50,,true,,153044,120,3,3,null,365,1885,136
+1571746279467,869,/2019/04/19/apache-jmeter-zoom-2560x1440/,200,OK,jp@gc - Ultimate Thread Group 1-50,text,true,,168938,160,3,3,https://loadtestweb.info/2019/04/19/apache-jmeter-zoom-2560x1440/,569,0,88
+1571746278093,869,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-50,,true,,168938,160,3,3,null,569,1376,88
+1571746281388,1699,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-51,text,true,,230297,1388,3,3,https://loadtestweb.info/2018/11/16/jmeter-maven-plugin/comment-page-1/#comment-13687,401,0,82
+1571746281388,401,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-51,text,true,,1192,1033,3,3,https://loadtestweb.info/wp-comments-post.php,401,0,82
+1571746281792,1295,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-51,text,true,,229105,355,3,3,https://loadtestweb.info/2018/11/16/jmeter-maven-plugin/comment-page-1/#comment-13687,658,0,0
+1571746272415,1699,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-51,,true,,230297,1388,3,3,null,401,8973,82
+1571746285127,793,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-49,text,true,,152966,120,4,4,https://loadtestweb.info/,530,0,151
+1571746284867,793,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-49,,true,,152966,120,4,4,null,530,261,151
+1571746285947,1114,/2019/06/29/%d0%b0%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%b0%d1%8f-ide-%d0%b4%d0%bb%d1%8f-jmeter/,200,OK,jp@gc - Ultimate Thread Group 1-49,text,true,,154564,246,4,4,https://loadtestweb.info/2019/06/29/%d0%b0%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%b0%d1%8f-ide-%d0%b4%d0%bb%d1%8f-jmeter/,562,0,0
+1571746285921,1114,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-49,,true,,154564,246,4,4,null,562,28,0
+1571746288501,1853,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-50,text,true,,169972,1545,4,4,https://loadtestweb.info/2019/04/19/apache-jmeter-zoom-2560x1440/comment-page-1/#comment-13688,466,0,85
+1571746288501,466,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-50,text,true,,1201,1181,4,4,https://loadtestweb.info/wp-comments-post.php,466,0,85
+1571746288968,1386,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-50,text,true,,168771,364,4,4,https://loadtestweb.info/2019/04/19/apache-jmeter-zoom-2560x1440/comment-page-1/#comment-13688,646,0,0
+1571746280338,1853,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-50,,true,,169972,1545,4,4,null,466,8165,85
+1571746293037,851,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-52,text,true,,153022,120,4,4,https://loadtestweb.info/,521,0,146
+1571746289550,851,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-52,,true,,153022,120,4,4,null,521,3488,146
+1571746292817,1782,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-49,text,true,,157930,1491,4,4,https://loadtestweb.info/2019/06/29/%d0%b0%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%b0%d1%8f-ide-%d0%b4%d0%bb%d1%8f-jmeter/comment-page-1/#comment-13689,476,0,81
+1571746292817,476,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-49,text,true,,1287,1041,4,4,https://loadtestweb.info/wp-comments-post.php,476,0,81
+1571746293294,1305,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-49,text,true,,156643,450,4,4,https://loadtestweb.info/2019/06/29/%d0%b0%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%b0%d1%8f-ide-%d0%b4%d0%bb%d1%8f-jmeter/comment-page-1/#comment-13689,587,0,0
+1571746287063,1782,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-49,,true,,157930,1491,4,4,null,476,5755,81
+1571746295961,1142,/2019/06/29/excel-4-loadrunner/,200,OK,jp@gc - Ultimate Thread Group 1-52,text,true,,142458,150,5,5,https://loadtestweb.info/2019/06/29/excel-4-loadrunner/,687,0,83
+1571746293889,1142,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-52,,true,,142458,150,5,5,null,687,2073,83
+1571746297239,833,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-48,text,true,,152966,120,5,5,https://loadtestweb.info/,376,0,162
+1571746294866,833,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-48,,true,,152966,120,5,5,null,376,2374,162
+1571746298441,565,/2019/06/29/%d0%b0%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%b0%d1%8f-ide-%d0%b4%d0%bb%d1%8f-jmeter/,200,OK,jp@gc - Ultimate Thread Group 1-48,text,true,,154765,246,5,5,https://loadtestweb.info/2019/06/29/%d0%b0%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%b0%d1%8f-ide-%d0%b4%d0%bb%d1%8f-jmeter/,319,0,0
+1571746298074,565,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-48,,true,,154765,246,5,5,null,319,368,0
+1571746302869,396,/wp-comments-post.php,409,Conflict,jp@gc - Ultimate Thread Group 1-52,text,false,Test failed: text expected not to contain /Ошибка при отправке комментария/,3380,930,5,5,https://loadtestweb.info/wp-comments-post.php,396,0,83
+1571746297104,396,Отправка комментария от незарегистрированного пользователя,,"Number of samples in transaction : 2, number of failing samples : 1",jp@gc - Ultimate Thread Group 1-52,,false,,3380,930,5,5,null,396,5766,83
+1571746304222,644,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-51,text,true,,152966,120,5,5,https://loadtestweb.info/,353,0,153
+1571746299549,644,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-51,,true,,152966,120,5,5,null,353,4674,153
+1571746306947,825,/2018/12/04/clickhouse-apache-jmeter/,200,OK,jp@gc - Ultimate Thread Group 1-51,text,true,,155107,156,6,6,https://loadtestweb.info/2018/12/04/clickhouse-apache-jmeter/,585,0,129
+1571746304867,825,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-51,,true,,155107,156,6,6,null,585,2081,129
+1571746308167,393,/wp-comments-post.php,409,Conflict,jp@gc - Ultimate Thread Group 1-48,text,false,Test failed: text expected not to contain /Ошибка при отправке комментария/,3380,1047,6,6,https://loadtestweb.info/wp-comments-post.php,393,0,85
+1571746299007,393,Отправка комментария от незарегистрированного пользователя,,"Number of samples in transaction : 2, number of failing samples : 1",jp@gc - Ultimate Thread Group 1-48,,false,,3380,1047,6,6,null,393,9160,85
+1571746309493,1284,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-47,text,true,,152958,120,6,6,https://loadtestweb.info/,389,0,144
+1571746304867,1284,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-47,,true,,152958,120,6,6,null,389,4627,144
+1571746311945,1218,/2019/01/04/apache-jmeter-materials/,200,OK,jp@gc - Ultimate Thread Group 1-47,text,true,,189042,155,6,6,https://loadtestweb.info/2019/01/04/apache-jmeter-materials/,791,0,84
+1571746310778,1218,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-47,,true,,189042,155,6,6,null,791,1168,84
+1571746313297,800,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-50,text,true,,153059,120,6,6,https://loadtestweb.info/,510,0,140
+1571746309548,800,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-50,,true,,153059,120,6,6,null,510,3750,140
+1571746316937,872,/2019/06/29/excel-4-loadrunner/,200,OK,jp@gc - Ultimate Thread Group 1-50,text,true,,142427,150,7,7,https://loadtestweb.info/2019/06/29/excel-4-loadrunner/,629,0,79
+1571746314098,872,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-50,,true,,142427,150,7,7,null,629,2840,79
+1571746317167,789,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-46,text,true,,152996,120,7,7,https://loadtestweb.info/,378,0,130
+1571746314867,789,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-46,,true,,152996,120,7,7,null,378,2301,130
+1571746316736,1425,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-51,text,true,,156470,1400,7,7,https://loadtestweb.info/2018/12/04/clickhouse-apache-jmeter/comment-page-1/#comment-13690,482,0,78
+1571746316736,482,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-51,text,true,,1199,1040,7,7,https://loadtestweb.info/wp-comments-post.php,482,0,78
+1571746317218,943,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-51,text,true,,155271,360,7,7,https://loadtestweb.info/2018/12/04/clickhouse-apache-jmeter/comment-page-1/#comment-13690,573,0,0
+1571746307773,1425,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-51,,true,,156470,1400,7,7,null,482,8964,78
+1571746320594,395,/wp-comments-post.php,409,Conflict,jp@gc - Ultimate Thread Group 1-47,text,false,Test failed: text expected not to contain /Ошибка при отправке комментария/,3380,826,7,7,https://loadtestweb.info/wp-comments-post.php,395,0,83
+1571746313164,395,Отправка комментария от незарегистрированного пользователя,,"Number of samples in transaction : 2, number of failing samples : 1",jp@gc - Ultimate Thread Group 1-47,,false,,3380,826,7,7,null,395,7431,83
+1571746320863,898,/2019/01/04/fiddler-add-ons/,200,OK,jp@gc - Ultimate Thread Group 1-46,text,true,,153338,147,7,7,https://loadtestweb.info/2019/01/04/fiddler-add-ons/,520,0,97
+1571746317957,898,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-46,,true,,153338,147,7,7,null,520,2908,97
+1571746322084,830,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-49,text,true,,153013,120,7,7,https://loadtestweb.info/,357,0,138
+1571746319549,830,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-49,,true,,153013,120,7,7,null,357,2536,138
+1571746324981,705,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-52,text,true,,153088,120,8,8,https://loadtestweb.info/,337,0,138
+1571746324233,705,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-52,,true,,153088,120,8,8,null,337,749,138
+1571746326342,969,/2019/06/29/excel-4-loadrunner/,200,OK,jp@gc - Ultimate Thread Group 1-52,text,true,,142687,150,8,8,https://loadtestweb.info/2019/06/29/excel-4-loadrunner/,578,0,0
+1571746325687,969,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-52,,true,,142687,150,8,8,null,578,656,0
+1571746326596,1180,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-50,text,true,,145547,1175,8,8,https://loadtestweb.info/2019/06/29/excel-4-loadrunner/comment-page-1/#comment-13691,494,0,131
+1571746326596,494,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-50,text,true,,1191,821,8,8,https://loadtestweb.info/wp-comments-post.php,494,0,131
+1571746327090,686,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-50,text,true,,144356,354,8,8,https://loadtestweb.info/2019/06/29/excel-4-loadrunner/comment-page-1/#comment-13691,419,0,0
+1571746317810,1180,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-50,,true,,145547,1175,8,8,null,494,8786,131
+1571746326601,1189,/2019/06/29/%d0%b0%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%b0%d1%8f-ide-%d0%b4%d0%bb%d1%8f-jmeter/,200,OK,jp@gc - Ultimate Thread Group 1-49,text,true,,154692,246,8,8,https://loadtestweb.info/2019/06/29/%d0%b0%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%b0%d1%8f-ide-%d0%b4%d0%bb%d1%8f-jmeter/,429,0,127
+1571746322915,1189,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-49,,true,,154692,246,8,8,null,429,3688,127
+1571746327220,583,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-45,text,true,,153124,120,8,8,https://loadtestweb.info/,336,0,142
+1571746324867,583,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-45,,true,,153124,120,8,8,null,336,2354,142
+1571746328318,1272,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-46,text,true,,156408,1166,8,8,https://loadtestweb.info/2019/01/04/fiddler-add-ons/comment-page-1/#comment-13692,479,0,84
+1571746328318,479,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-46,text,true,,1188,815,8,8,https://loadtestweb.info/wp-comments-post.php,479,0,84
+1571746328798,792,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-46,text,true,,155220,351,8,8,https://loadtestweb.info/2019/01/04/fiddler-add-ons/comment-page-1/#comment-13692,401,0,0
+1571746321763,1272,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-46,,true,,156408,1166,8,8,null,479,6556,84
+1571746329809,955,/2019/01/04/fiddler-add-ons/,200,OK,jp@gc - Ultimate Thread Group 1-45,text,true,,155215,147,8,8,https://loadtestweb.info/2019/01/04/fiddler-add-ons/,495,0,81
+1571746327804,955,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-45,,true,,155215,147,8,8,null,495,2006,81
+1571746331878,941,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-48,text,true,,153074,120,8,8,https://loadtestweb.info/,504,0,140
+1571746329549,941,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-48,,true,,153074,120,8,8,null,504,2330,140
+1571746333428,687,/2019/06/30/guide-alm-performance-center/,200,OK,jp@gc - Ultimate Thread Group 1-48,text,true,,161728,160,8,8,https://loadtestweb.info/2019/06/30/guide-alm-performance-center/,445,0,0
+1571746332820,687,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-48,,true,,161728,160,8,8,null,445,609,0
+1571746334269,461,/wp-comments-post.php,409,Conflict,jp@gc - Ultimate Thread Group 1-49,text,false,Test failed: text expected not to contain /Ошибка при отправке комментария/,3380,1312,8,8,https://loadtestweb.info/wp-comments-post.php,461,0,81
+1571746327792,461,Отправка комментария от незарегистрированного пользователя,,"Number of samples in transaction : 2, number of failing samples : 1",jp@gc - Ultimate Thread Group 1-49,,false,,3380,1312,8,8,null,461,6477,81
+1571746334425,1212,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-52,text,true,,145588,1386,9,9,https://loadtestweb.info/2019/06/29/excel-4-loadrunner/comment-page-1/#comment-13693,397,0,81
+1571746334425,397,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-52,text,true,,1191,1032,9,9,https://loadtestweb.info/wp-comments-post.php,397,0,81
+1571746334822,815,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-52,text,true,,144397,354,9,9,https://loadtestweb.info/2019/06/29/excel-4-loadrunner/comment-page-1/#comment-13693,544,0,0
+1571746327312,1212,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-52,,true,,145588,1386,9,9,null,397,7113,81
+1571746335277,798,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-51,text,true,,153053,120,9,9,https://loadtestweb.info/,513,0,136
+1571746334232,798,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-51,,true,,153053,120,9,9,null,513,1046,136
+1571746337535,631,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-44,text,true,,153021,120,9,9,https://loadtestweb.info/,342,0,148
+1571746334866,631,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-44,,true,,153021,120,9,9,null,342,2670,148
+1571746338426,962,/2019/05/02/linux-fds-monitoring/,200,OK,jp@gc - Ultimate Thread Group 1-44,text,true,,158374,152,9,9,https://loadtestweb.info/2019/05/02/linux-fds-monitoring/,574,0,0
+1571746338167,962,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-44,,true,,158374,152,9,9,null,574,260,0
+1571746339209,457,/wp-comments-post.php,409,Conflict,jp@gc - Ultimate Thread Group 1-45,text,false,Test failed: text expected not to contain /Ошибка при отправке комментария/,3380,1167,9,9,https://loadtestweb.info/wp-comments-post.php,457,0,83
+1571746330765,457,Отправка комментария от незарегистрированного пользователя,,"Number of samples in transaction : 2, number of failing samples : 1",jp@gc - Ultimate Thread Group 1-45,,false,,3380,1167,9,9,null,457,8445,83
+1571746340275,762,/2019/06/09/gatling-rabbitmq-amqp/,200,OK,jp@gc - Ultimate Thread Group 1-51,text,true,,154760,153,9,9,https://loadtestweb.info/2019/06/09/gatling-rabbitmq-amqp/,509,0,85
+1571746336076,762,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-51,,true,,154760,153,9,9,null,509,4200,85
+1571746341114,757,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-47,text,true,,153045,120,9,9,https://loadtestweb.info/,495,0,132
+1571746339550,757,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-47,,true,,153045,120,9,9,null,495,1565,132
+1571746343599,563,/2019/06/29/%d0%b0%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%b0%d1%8f-ide-%d0%b4%d0%bb%d1%8f-jmeter/,200,OK,jp@gc - Ultimate Thread Group 1-47,text,true,,154675,246,9,9,https://loadtestweb.info/2019/06/29/%d0%b0%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%b0%d1%8f-ide-%d0%b4%d0%bb%d1%8f-jmeter/,318,0,81
+1571746341872,563,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-47,,true,,154675,246,9,9,null,318,1729,81
+1571746343761,1240,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-48,text,true,,165047,1317,10,10,https://loadtestweb.info/2019/06/30/guide-alm-performance-center/comment-page-1/#comment-13694,459,0,80
+1571746343761,459,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-48,text,true,,1203,953,10,10,https://loadtestweb.info/wp-comments-post.php,459,0,80
+1571746344220,781,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-48,text,true,,163844,364,10,10,https://loadtestweb.info/2019/06/30/guide-alm-performance-center/comment-page-1/#comment-13694,537,0,0
+1571746334116,1240,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-48,,true,,165047,1317,10,10,null,459,9646,80
+1571746345429,1267,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-44,text,true,,161611,1309,10,10,https://loadtestweb.info/2019/05/02/linux-fds-monitoring/comment-page-1/#comment-13695,506,0,86
+1571746345429,506,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-44,text,true,,1197,953,10,10,https://loadtestweb.info/wp-comments-post.php,506,0,86
+1571746345936,760,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-44,text,true,,160414,356,10,10,https://loadtestweb.info/2019/05/02/linux-fds-monitoring/comment-page-1/#comment-13695,451,0,0
+1571746339389,1267,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-44,,true,,161611,1309,10,10,null,506,6040,86
+1571746346439,1129,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-50,text,true,,153099,120,10,10,https://loadtestweb.info/,526,0,136
+1571746344231,1129,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-50,,true,,153099,120,10,10,null,526,2209,136
+1571746347060,1016,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-51,text,true,,157581,1290,10,10,https://loadtestweb.info/2019/06/09/gatling-rabbitmq-amqp/comment-page-1/#comment-13696,468,0,84
+1571746347060,468,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-51,text,true,,1198,933,10,10,https://loadtestweb.info/wp-comments-post.php,468,0,84
+1571746347529,547,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-51,text,true,,156383,357,10,10,https://loadtestweb.info/2019/06/09/gatling-rabbitmq-amqp/comment-page-1/#comment-13696,411,0,0
+1571746341038,1016,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-51,,true,,157581,1290,10,10,null,468,6023,84
+1571746348845,619,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-43,text,true,,152989,120,10,10,https://loadtestweb.info/,341,0,130
+1571746344867,619,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-43,,true,,152989,120,10,10,null,341,3979,130
+1571746351278,833,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-46,text,true,,153068,120,10,10,https://loadtestweb.info/,455,0,143
+1571746349549,833,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-46,,true,,153068,120,10,10,null,455,1731,143
+1571746351265,1015,/2019/06/30/guide-alm-performance-center/,200,OK,jp@gc - Ultimate Thread Group 1-50,text,true,,163486,160,10,10,https://loadtestweb.info/2019/06/30/guide-alm-performance-center/,711,0,81
+1571746347569,1015,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-50,,true,,163486,160,10,10,null,711,3697,81
+1571746352546,1333,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-47,text,true,,158008,1581,10,10,https://loadtestweb.info/2019/06/29/%d0%b0%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%b0%d1%8f-ide-%d0%b4%d0%bb%d1%8f-jmeter/comment-page-1/#comment-13697,472,0,86
+1571746352546,472,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-47,text,true,,1289,1131,10,10,https://loadtestweb.info/wp-comments-post.php,472,0,86
+1571746353018,861,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-47,text,true,,156719,450,10,10,https://loadtestweb.info/2019/06/29/%d0%b0%d0%bb%d1%8c%d1%82%d0%b5%d1%80%d0%bd%d0%b0%d1%82%d0%b8%d0%b2%d0%bd%d0%b0%d1%8f-ide-%d0%b4%d0%bb%d1%8f-jmeter/comment-page-1/#comment-13697,547,0,0
+1571746344164,1333,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-47,,true,,158008,1581,10,10,null,472,8383,86
+1571746353530,860,/2017/10/17/install-apache-jmeter/,200,OK,jp@gc - Ultimate Thread Group 1-43,text,true,,171178,153,10,10,https://loadtestweb.info/2017/10/17/install-apache-jmeter/,357,0,82
+1571746349465,860,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-43,,true,,171178,153,10,10,null,357,4066,82
+1571746355571,952,/2018/12/04/clickhouse-apache-jmeter/,200,OK,jp@gc - Ultimate Thread Group 1-46,text,true,,155108,156,11,11,https://loadtestweb.info/2018/12/04/clickhouse-apache-jmeter/,636,0,80
+1571746352113,952,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-46,,true,,155108,156,11,11,null,636,3459,80
+1571746357196,540,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-49,text,true,,153022,120,11,11,https://loadtestweb.info/,336,0,134
+1571746354231,540,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-49,,true,,153022,120,11,11,null,336,2966,134
+1571746358025,909,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-42,text,true,,152974,120,11,11,https://loadtestweb.info/,356,0,139
+1571746354867,909,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-42,,true,,152974,120,11,11,null,356,3160,139
+1571746358457,690,/2019/04/19/apache-jmeter-zoom-2560x1440/,200,OK,jp@gc - Ultimate Thread Group 1-49,text,true,,168890,160,11,11,https://loadtestweb.info/2019/04/19/apache-jmeter-zoom-2560x1440/,383,0,0
+1571746357737,690,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-49,,true,,168890,160,11,11,null,383,721,0
+1571746359073,850,/2019/06/09/gatling-rabbitmq-amqp/,200,OK,jp@gc - Ultimate Thread Group 1-42,text,true,,154867,153,11,11,https://loadtestweb.info/2019/06/09/gatling-rabbitmq-amqp/,350,0,0
+1571746358936,850,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-42,,true,,154867,153,11,11,null,350,139,0
+1571746360298,732,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-52,text,true,,153128,120,11,11,https://loadtestweb.info/,364,0,149
+1571746358914,732,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-52,,true,,153128,120,11,11,null,364,1385,149
+1571746360984,1006,loadtestweb.info,200,OK,jp@gc - Ultimate Thread Group 1-45,text,true,,153074,120,11,11,https://loadtestweb.info/,519,0,141
+1571746359549,1006,Заход на главную страницу,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-45,,true,,153074,120,11,11,null,519,1436,141
+1571746361069,1331,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-43,text,true,,174200,1180,11,11,https://loadtestweb.info/2017/10/17/install-apache-jmeter/comment-page-1/#comment-13698,487,0,85
+1571746361069,487,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-43,text,true,,1194,823,11,11,https://loadtestweb.info/wp-comments-post.php,487,0,85
+1571746361556,844,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-43,text,true,,173006,357,11,11,https://loadtestweb.info/2017/10/17/install-apache-jmeter/comment-page-1/#comment-13698,560,0,0
+1571746354391,1331,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-43,,true,,174200,1180,11,11,null,487,6679,85
+1571746361393,1527,/wp-comments-post.php,200,OK,jp@gc - Ultimate Thread Group 1-50,text,true,,166826,1196,11,11,https://loadtestweb.info/2019/06/30/guide-alm-performance-center/comment-page-1/#comment-13699,463,0,85
+1571746361393,463,/wp-comments-post.php-0,302,Found,jp@gc - Ultimate Thread Group 1-50,text,true,,1201,832,11,11,https://loadtestweb.info/wp-comments-post.php,463,0,85
+1571746361857,1063,/wp-comments-post.php-1,200,OK,jp@gc - Ultimate Thread Group 1-50,text,true,,165625,364,11,11,https://loadtestweb.info/2019/06/30/guide-alm-performance-center/comment-page-1/#comment-13699,602,0,0
+1571746352281,1527,Отправка комментария от незарегистрированного пользователя,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-50,,true,,166826,1196,11,11,null,463,9113,85
+1571746363689,815,/2019/06/29/excel-4-loadrunner/,200,OK,jp@gc - Ultimate Thread Group 1-45,text,true,,142737,150,11,11,https://loadtestweb.info/2019/06/29/excel-4-loadrunner/,342,0,86
+1571746361991,815,Переход на случайно выбранную статью,200,"Number of samples in transaction : 2, number of failing samples : 0",jp@gc - Ultimate Thread Group 1-45,,true,,142737,150,11,11,null,342,1700,86
